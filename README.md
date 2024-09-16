@@ -1,6 +1,6 @@
 # README
 
-[Published Website](https://the-ai-alliance.github.io/ai-software-ecosystem-guide/)
+[Published Website](https://the-ai-alliance.github.io/ai-accelerator-software-ecosystem-guide/)
 
 This repo contains the AI Alliance _Unlocking AI Potential: Navigating the Challenges and Opportunities of Diverse Hardware Accelerators_, published using [GitHub Pages](https://pages.github.com/). We welcome contributions as PRs. See the AI Alliance [CONTRIBUTING](https://github.com/The-AI-Alliance/community/blob/main/CONTRIBUTING.md) instructions. Also, you'll need to agree with the AI Alliance [Code of Conduct](https://github.com/The-AI-Alliance/community/blob/main/CODE_OF_CONDUCT.md) and all contributions will be covered by the [LICENSE](https://github.com/The-AI-Alliance/community/blob/main/LICENSE) (which is also in [this repo](LICENSE)).
 
@@ -28,7 +28,7 @@ Install a recent version of Ruby 3. Note that on MacOS, the default Ruby install
 This project's `Makefile` will attempt to install the remaining dependencies, including `jekyll`, when you run `make all` or `make view-local`.
 
 > [!WARNING]
-> The automatic setup of `jekyll` in the `Makefile` has only been tested on MacOS and it most likely doesn't work on Windows, unless you use the Linux subsystem. If you encounter problems on other platforms, please [post an issue](https://github.com/The-AI-Alliance/ai-software-ecosystem-guide/issues) to get help, or if you can fix the issue, a [pull request](https://github.com/The-AI-Alliance/ai-software-ecosystem-guide/pulls) (PR) is always welcome :nerd_face:. (More details on PRs below.)
+> The automatic setup of `jekyll` in the `Makefile` has only been tested on MacOS and it most likely doesn't work on Windows, unless you use the Linux subsystem. If you encounter problems on other platforms, please [post an issue](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/issues) to get help, or if you can fix the issue, a [pull request](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/pulls) (PR) is always welcome :nerd_face:. (More details on PRs below.)
 
 So, try `make view-local` and see if Jekyll is installed successfully and the website is rendered.
 
@@ -103,7 +103,7 @@ For external links, add a `target` tag using the following syntax, which works f
 [title]({{site.baseurl}}/relative_URL){:target="_target"}
 ```
 
-The `target` value is arbitrary; use whatever you want. While this is a little more tedious to type, it is usually better for users so they don't lose their place in the document. Also, [our stylesheet](https://github.com/The-AI-Alliance/ai-software-ecosystem-guide/blob/main/docs/_includes/css/custom.scss.liquid) is configured to put the little up-and-to-the-right arrows after every link that isn't relative, i.e., links that start with `http` or `https`. This provides a visual clue that a new tab will be opened.
+The `target` value is arbitrary; use whatever you want. While this is a little more tedious to type, it is usually better for users so they don't lose their place in the document. Also, [our stylesheet](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/blob/main/docs/_includes/css/custom.scss.liquid) is configured to put the little up-and-to-the-right arrows after every link that isn't relative, i.e., links that start with `http` or `https`. This provides a visual clue that a new tab will be opened.
 
 ### Emojis
 
@@ -158,7 +158,7 @@ The `make` target runs the following command:
 cd docs && bundle exec jekyll serve --baseurl '' --incremental
 ```
 
-The `--baseurl` flag effectively supports the simple URL, `localhost:4000`. (Without it, the URL would be `localhost:4000/The-AI-Alliance/ai-software-ecosystem-guide/`.) The `--incremental` flag lets you edit the pages and refresh the browser tab to see the updates immediately. 
+The `--baseurl` flag effectively supports the simple URL, `localhost:4000`. (Without it, the URL would be `localhost:4000/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/`.) The `--incremental` flag lets you edit the pages and refresh the browser tab to see the updates immediately. 
 
 > [!NOTE]
 > Well, more or less immediately. It can take several seconds for new pages to be generated and sometimes you'll get weird behaviors if you change URL paths, etc. So, occasionally it is useful to _control-c_ in the terminal and rerun `make view-local`.
@@ -217,7 +217,7 @@ bundle install
 bundle update html-pipeline
 ```
 
-Finally, if you are still stuck, please [post an issue](https://github.com/The-AI-Alliance/ai-software-ecosystem-guide/issues) to get help.
+Finally, if you are still stuck, please [post an issue](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/issues) to get help.
 
 > **Help Needed:**
 >
