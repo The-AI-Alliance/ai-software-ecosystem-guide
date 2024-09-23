@@ -16,8 +16,7 @@ Welcome to the **The AI Alliance Trust and Safety User Guide**, an introduction 
 
 This guide is organized as follows:
 
-* [Introduction to Trust and Safety]({{site.baseurl}}/introduction): What these concepts mean to us and why they are important.
-* [A Glossary of Terms]({{site.baseurl}}/glossary): How we define various terms.
+* [Draft Guide]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of guide.
 
 Additional links:
 
