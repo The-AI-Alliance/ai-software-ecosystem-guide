@@ -3,8 +3,7 @@
 David Edelsohn, AI Alliance, IBM  
 Andrew Richards, UXL Foundation  
 Michael Wong, UXL Foundation, Khronos, ISOCPP, RISC-V  
-(co-authors from UXL Foundation, LFAI & Data)  
-Thanks to AMD, Meta, Modular
+Thanks to AMD, Intel, Meta, and Modular
 
 # Introduction
 
