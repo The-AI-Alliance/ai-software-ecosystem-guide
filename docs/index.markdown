@@ -17,6 +17,7 @@ Welcome to the **The AI Alliance Trust and Safety User Guide**, an introduction 
 This guide is organized as follows:
 
 * [Draft Guide]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of guide.
+* [Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide.md)
 
 Additional links:
 
