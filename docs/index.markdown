@@ -17,7 +17,7 @@ Welcome to the **The AI Alliance AI Accelerator Software Ecosystem Guide**, an i
 This guide is organized as follows:
 
 * [Draft Ecosystem Guide]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of the guide.
-* [Preliminary Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide)
+* [Preliminary Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide): Website version of the guide that will be separated into chapters and updated as a &ldquo;living&rdquo; document.
 
 Additional links:
 
