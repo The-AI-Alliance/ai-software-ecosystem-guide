@@ -18,10 +18,11 @@ Coming soon.
 
 ## Sponsoring AI Alliance Member Organizations
 
+* AMD
 * IBM
 * Dell
-* AMD
 * Intel
+* Meta
 * ... more soon! ...
 
 ## Other AI Alliance Information
