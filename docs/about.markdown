@@ -16,19 +16,30 @@ If you have any questions or concerns about this initiative, please contact us a
 
 Coming soon.
 
-## Sponsoring AI Alliance Member Organizations
+## Participating AI Alliance Member Organizations
 
-* AMD
+* Alinia
+* Cleveland Clinic
+* Columbia University
+* Himalaya Quantitative Solutions
+* Humane Intelligence
+* HydroX AI
 * IBM
-* Dell
-* Intel
+* Kakao Corporation
+* Mohamed Bin Zayed University of Artificial Intelligence
 * Meta
+* Neo4J
+* RedHat
+* ServiceNow
+* Sony Research
+* University of Notre Dame
+* University of Utah
 * ... more soon! ...
 
 ## Other AI Alliance Information
 
 * [More About the AI Alliance](https://thealliance.ai/about-aia){:target="ai-alliance"}
-* [Contact Us](mailto:data@thealliance.ai) (email)
+* [Contact Us](mailto:contact@thealliance.ai) (email)
 * Follow us on [LinkedIn](https://www.linkedin.com/company/the-aialliance/){:target="linkedin"} and [X](https://x.com/thealliance_ai){:target="twitter"}
 
 ## About This Documentation
