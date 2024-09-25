@@ -1,5 +1,5 @@
 
-pages_url    := https://the-ai-alliance.github.io/trust-safety-user-guide/
+pages_url    := https://the-ai-alliance.github.io/i-accelerator-software-ecosystem-guide/
 docs_dir     := docs
 site_dir     := ${docs_dir}/_site
 clean_dirs   := ${site_dir} ${docs_dir}/.sass-cache
@@ -15,7 +15,7 @@ GIT_HASH            ?= $(shell git show --pretty="%H" --abbrev-commit |head -1)
 TIMESTAMP           ?= $(shell date +"%Y%m%d-%H%M%S")
 
 define help_message
-Quick help for trust-safety-user-guide make process.
+Quick help for this make process.
 
 make all                # Clean and locally view the document.
 make clean              # Remove built artifacts, etc.
@@ -120,7 +120,7 @@ view-local:: setup-jekyll do-view-local
 do-view-local: clean run-jekyll
 
 # Passing --baseurl '' allows us to use `localhost:4000` rather than require
-# `localhost:4000/The-AI-Alliance/trust-safety-user-guide` when -ping locally.
+# `localhost:4000/The-AI-Alliance/i-accelerator-software-ecosystem-guide` when -ping locally.
 run-jekyll:
 	@echo
 	@echo "Once you see the http://127.0.0.1:4000/ URL printed, open it with command+click..."
