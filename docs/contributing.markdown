@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contributing
-nav_order: 20
+nav_order: 90
 ---
 
 # How to Contribute to This Document

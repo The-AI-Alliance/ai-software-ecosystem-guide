@@ -1,5 +1,5 @@
 
-pages_url    := https://the-ai-alliance.github.io/i-accelerator-software-ecosystem-guide/
+pages_url    := https://the-ai-alliance.github.io/ai-accelerator-software-ecosystem-guide/
 docs_dir     := docs
 site_dir     := ${docs_dir}/_site
 clean_dirs   := ${site_dir} ${docs_dir}/.sass-cache

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Ecosystem Guide
+nav_order: 20
+---
+
 # Unlocking AI Potential: Navigating the Challenges and Opportunities of Diverse Hardware Accelerators
 
 David Edelsohn, AI Alliance, IBM  
