@@ -150,7 +150,7 @@ Intermediate Representation Execution Environment (IREE) is an MLIR-based framew
 
 ### Model Support and Code Generation
 
-IREE can utilize models expressed in PyTorch, TensorFlow, TensorFlow Lite, JAX, and ONNX, and can generate code for CPUs, NVIDIA CUDA, AMD ROCm, and SPIR-V for a growing list of hardware accelerators.  PyTorch connects to Torch-MLIR, and TensorFlow and JAX interface with the StableHLO IR into MHLO graph optimizer, progressively lowering to MLIR LinAlg dialect and eventually the IREE execution environment utilizing LLVM to generate CPU and GPU code.
+IREE can utilize models expressed in PyTorch, TensorFlow, LiteRT (formerly TensorFlow Lite), JAX, and ONNX, and can generate code for CPUs, NVIDIA CUDA, AMD ROCm, and SPIR-V for a growing list of hardware accelerators.  PyTorch connects to Torch-MLIR, and TensorFlow and JAX interface with the StableHLO IR into MHLO graph optimizer, progressively lowering to MLIR LinAlg dialect and eventually the IREE execution environment utilizing LLVM to generate CPU and GPU code.
 
 ### MLIR Dialects and Optimization Frameworks
 
@@ -168,7 +168,7 @@ IREE's focus on a unified MLIR-based infrastructure and its comprehensive approa
 | Feature | XLA | IREE |
 | :---- | :---- | :---- |
 | **IR** | HLO (High-Level Optimizer) | MLIR (Multi-Level Intermediate Representation) |
-| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, TensorFlow Lite, JAX, ONNX |
+| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, LiteRT, JAX, ONNX |
 | **Backends** | CPUs, GPUs, TPUs | CPUs, NVIDIA CUDA, AMD ROCm, SPIR-V (Vulkan, OpenCL) |
 | **Focus** | Linear algebra optimization | End-to-end compilation and optimization |
 
@@ -209,21 +209,21 @@ By addressing the specific needs of mobile and edge AI deployment, ExecuTorch pr
 | **Scalability** | Designed for scalability, especially with distribution strategies | Well-suited for distributed computing and large-scale models | Scalable, with various distributed training options | Optimized for ultra-large-scale models and distributed training | Designed for mobile and edge deployments, not focused on large-scale training |
 | **Target Environments** | Cloud, servers, workstations | Cloud, servers, workstations | Cloud, servers, workstations, mobile | Cloud, servers, workstations | Mobile and edge devices |
 
-## TensorFlow Lite: Enabling On-Device Machine Learning
+## LiteRT: Enabling On-Device Machine Learning
 
-TensorFlow Lite (TFLite) is a lightweight, open-source deep learning framework designed specifically for mobile and edge devices. It enables developers to deploy machine learning models on resource-constrained environments such as smartphones, embedded systems, and IoT devices. TFLite provides a suite of tools and APIs for optimizing and converting TensorFlow models into a format that is efficient for mobile and edge hardware. Its interpreter is optimized for low latency and high performance, supporting hardware acceleration on various platforms, including Android Neural Networks API (NNAPI), GPU, and Hexagon DSP. TFLite's ability to perform on-device inference ensures real-time data processing and reduced dependency on cloud services, making it ideal for applications requiring low latency, privacy, and offline capabilities.
+Lite Runtime (LiteRT), formerly TensorFlow Lite (TFLite), is a lightweight, open-source deep learning framework designed specifically for mobile and edge devices. It enables developers to deploy machine learning models on resource-constrained environments such as smartphones, embedded systems, and IoT devices. LiteRT provides a suite of tools and APIs for optimizing and converting TensorFlow models into a format that is efficient for mobile and edge hardware. Its interpreter is optimized for low latency and high performance, supporting hardware acceleration on various platforms, including Android Neural Networks API (NNAPI), GPU, and Hexagon DSP. LiteRT's ability to perform on-device inference ensures real-time data processing and reduced dependency on cloud services, making it ideal for applications requiring low latency, privacy, and offline capabilities.
 
 ### Use cases
 
-TFLite has been widely adopted across various industries and applications:
+LiteRT has been widely adopted across various industries and applications:
 
-* **Mobile Apps:** TFLite powers on-device AI features in mobile apps, such as real-time image recognition, language translation, and voice assistants.  
-* **Embedded Systems:** TFLite enables AI on devices like microcontrollers and IoT devices, allowing for intelligent edge computing in areas like smart homes, wearables, and industrial automation.  
-* **Healthcare:** TFLite has been used to develop medical image analysis tools, disease prediction models, and personalized health monitoring applications.  
-* **Finance:** TFLite can be leveraged for fraud detection, risk assessment, and personalized financial recommendations.  
-* **Autonomous Systems:** TFLite is used in applications like object detection and classification for autonomous vehicles and drones.
+* **Mobile Apps:** LiteRT powers on-device AI features in mobile apps, such as real-time image recognition, language translation, and voice assistants.  
+* **Embedded Systems:** LiteRT enables AI on devices like microcontrollers and IoT devices, allowing for intelligent edge computing in areas like smart homes, wearables, and industrial automation.  
+* **Healthcare:** LiteRT has been used to develop medical image analysis tools, disease prediction models, and personalized health monitoring applications.  
+* **Finance:** LiteRT can be leveraged for fraud detection, risk assessment, and personalized financial recommendations.  
+* **Autonomous Systems:** LiteRT is used in applications like object detection and classification for autonomous vehicles and drones.
 
-| Feature | TensorFlow | JAX | PyTorch | PaddlePaddle | ExecuTorch | TensorFlow Lite |
+| Feature | TensorFlow | JAX | PyTorch | PaddlePaddle | ExecuTorch | LiteRT |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | **Programming Model** | Imperative/Declarative | Functional | Imperative | Imperative/Declarative | Imperative (PyTorch) | Imperative (limited) |
 | **Compilation** | AOT/JIT | JIT (tracing) | Eager/TorchScript | HLIR/PIR/CINN | Multi-stage | AOT |
@@ -247,7 +247,7 @@ Paddle Lite has been successfully deployed in various real-world applications, i
 * **IoT Devices:** Real-time sensor data analysis, anomaly detection, predictive maintenance.  
 * **Robotics:** Object tracking, path planning, control systems for autonomous robots.
 
-| Feature | TensorFlow | JAX | PyTorch | PaddlePaddle | ExecuTorch | TensorFlow Lite | Paddle Lite |
+| Feature | TensorFlow | JAX | PyTorch | PaddlePaddle | ExecuTorch | LiteRT | Paddle Lite |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | **Programming Model** | Imperative/Declarative | Functional | Imperative | Imperative/Declarative | Imperative (PyTorch) | Imperative (limited) | Imperative (limited) |
 | **Compilation** | AOT/JIT | JIT (tracing) | Eager/TorchScript | HLIR/PIR/CINN | Multi-stage | AOT | Model optimization pipeline |
@@ -355,7 +355,7 @@ This offers Technical Advantages of Efficient Handling of High-Dimensional Data,
 | Feature | XLA | IREE | PolyBlocks |
 | :---- | :---- | :---- | :---- |
 | **IR (Intermediate Representation)** | HLO (High-Level Optimizer) | MLIR (Multi-Level Intermediate Representation) | MLIR |
-| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, TensorFlow Lite, JAX, ONNX | PyTorch, TensorFlow, JAX |
+| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, LiteRT, JAX, ONNX | PyTorch, TensorFlow, JAX |
 | **Backends** | CPUs, GPUs, TPUs | CPUs, GPUs, TPUs, some NPUs, targeting more | CPUs, GPUs, specialized accelerators |
 | **Focus** | Linear algebra | General-purpose ML model optimization | High-dimensional data, polyhedral optimizations |
 
@@ -386,7 +386,7 @@ TVM integrates with various tools and frameworks:
 | Feature | XLA | IREE | TVM | PolyBlocks |
 | :---- | :---- | :---- | :---- | :---- |
 | **IR (Intermediate Representation)** | HLO (High-Level Optimizer) | MLIR (Multi-Level Intermediate Representation) | Relay (functional graph IR) | MLIR |
-| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, TensorFlow Lite, JAX, ONNX | TensorFlow, PyTorch, ONNX, Keras | PyTorch, TensorFlow, JAX |
+| **Frontends** | TensorFlow, JAX | PyTorch, TensorFlow, LiteRT, JAX, ONNX | TensorFlow, PyTorch, ONNX, Keras | PyTorch, TensorFlow, JAX |
 | **Backends** | CPUs, GPUs, TPUs | CPUs, GPUs, TPUs, some NPUs, targeting more | CPUs, GPUs, specialized accelerators | CPUs, GPUs, specialized accelerators |
 | **Focus** | Linear algebra | General-purpose ML model optimization | General-purpose ML model optimization | High-dimensional data, polyhedral optimizations |
 

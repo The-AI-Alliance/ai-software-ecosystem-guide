@@ -10,14 +10,14 @@ has_children: false
 | **Authors** | [The AI Alliance Diverse Hardware Work Group](https://thealliance.ai/focusareas/diverse-hardware){:target="ai-alliance-dhwg"} |
 | **History** | V1.0.0, 2024-09-23 |
 
-Welcome to the **The AI Accelerator Software Ecosystem Guide**, an introduction to the broad topic of software tools that support seamless execution of AI workloads on different hardware accelerators.
+Welcome to **The AI Accelerator Software Ecosystem Guide**, an introduction to the broad topic of software tools that support seamless execution of AI workloads on different hardware accelerators.
 
 > **Tip:** Use the search box at the top of this page to find specific content.
 
 This guide is organized as follows:
 
-* [Draft Guide]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of the guide. (This PDF will be converted to separate pages for easier reading, etc. - TODO)
-<!-- * [Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide) -->
+* [Draft Ecosystem Guide PDF]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of the guide.
+* [Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide): Current version of the guide updated as a &ldquo;living&rdquo; document. (The guide will be separated into chapter.)
 
 Additional links:
 
