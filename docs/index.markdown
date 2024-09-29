@@ -18,6 +18,7 @@ This guide is organized as follows:
 
 * [Draft Ecosystem Guide PDF]({{site.baseurl}}/files/AI%20Accelerator%20Software%20Ecosystem%20Guide.pdf): Draft PDF of the guide.
 * [Ecosystem Guide]({{site.baseurl}}/Ecosystem%20Guide): Current version of the guide updated as a &ldquo;living&rdquo; document. (The guide will be separated into chapter.)
+* [Ecosystem Guide Podcast]({{site.baseurl}}/files/Ecosystem%20Guide.wav): An AI-generated podcast created by Google NotebookLM presenting an overview of the Ecosystem Guide.
 
 Additional links:
 
