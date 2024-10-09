@@ -6,51 +6,20 @@ This repo contains the AI Alliance _Unlocking AI Potential: Navigating the Chall
 
 > This work is licensed under Creative Commons Attribution 4.0 International. To view a copy of this license, see [LICENSE](LICENSE) or visit https://creativecommons.org/licenses/by/4.0/legalcode.
 
-## Quick Setup
+## Contributing New or Improved Web Site Content
 
-We use [GitHub Pages](https://pages.github.com/) so edits can be made in Markdown, updates can be managed using pull requests, and the results can be published automatically by GitHub.
-
-In fact, each page has _Edit this page on GitHub_ links, making it easy to view a page, then go straight to the source to edit it and submit a PR! This is the best way to help us fix typos and make similar small edits.
-
-However, this easy approach only supports correcting content on a single page. for more significant changes, like adding new pages, you may want the ability to preview the changes locally. 
-
-Local previewing allows you to see how any changes, even on a single page, will _really_ look when rendered with stylesheets, etc. While GitHub renders Markdown well, there are extensions we use that are supported by Jekyll that won't be rendered correctly in GitHub's default Markdown file viewer. 
-
-> [!NOTE]
-> If you don't want to setup `jekyll` for previewing or if you have trouble setting it up, don't let that stop you from contributing content! Submit a PR with your changes and we'll review them in a running environment ourselves. We'll provide feedback as needed.
-
-So, to view the website locally and to make more extensive changes, you'll need to have a recent version of [Ruby](https://www.ruby-lang.org/en/) installed, along with the [`gem`](https://docs.ruby-lang.org/en/master/Gem.html) library management tool, and [`jekyll`](https://jekyllrb.com/) which is the webserver and rendering engine.
-
-We discuss these steps in more depth [below](#setup-jekyll), but the following steps may _just work_ for you.
-
-Install a recent version of Ruby 3. Note that on MacOS, the default Ruby installation is old, version 2.6.10. Installing Ruby will also install the `gem` dependency tool.
-
-This project's `Makefile` will attempt to install the remaining dependencies, including `jekyll`, when you run `make all` or `make view-local`.
-
-> [!WARNING]
-> The automatic setup of `jekyll` in the `Makefile` has only been tested on MacOS and it most likely doesn't work on Windows, unless you use the Linux subsystem. If you encounter problems on other platforms, please [post an issue](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/issues) to get help, or if you can fix the issue, a [pull request](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/pulls) (PR) is always welcome :nerd_face:. (More details on PRs below.)
-
-So, try `make view-local` and see if Jekyll is installed successfully and the website is rendered.
-
-The command will finish with a message like this:
-
-```
-...
-Server address: http://127.0.0.1:4000/
-Server running... press ctrl-c to stop.
-```
-
-Open the URL in a browser. 
-
-> [!TIP]
-> 1. On MacOS, use &#8984;-click on the URL to open it in a browser.
-> 2. Run `make help` for a list of commands defined.
-
-## Contributing New or Improved Content
+First, thank you for your interest in improving this content! Please see our [Alliance contributing page](https://github.com/The-AI-Alliance/community/) for general information about contributing to any of our projects. This section provides some specific details you need to know.
 
 What gets displayed by GitHub Pages is the customized Markdown files in the `docs` directory. If you need to create a new page, copy an existing page to get the correct "header" information, then edit as needed.
 
 Here are some things you should know.
+
+### We Require "Developer Certificate of Origin" (DCO)
+
+> [!WARNING]
+> Before you make any git commits with changes, understand what's required for DCO.
+
+See the Alliance contributing guide [section on DCO](https://github.com/The-AI-Alliance/community/blob/main/CONTRIBUTING.md#developer-certificate-of-origin) for details. In practical terms, supporting this requirement means you must use the `-s` flag with your `git commit` commands.
 
 ### Using the Correct Branch
 
@@ -109,11 +78,49 @@ The `target` value is arbitrary; use whatever you want. While this is a little m
 
 In the pages, you can use emojis, e.g., `:+1:` yields :+1:, `:smirk:` yields :smirk:, `:nerd_face:` yields :nerd_face:, etc. The `jemoji` Ruby gem adds this capability. [Here is a list of available emojis](https://www.webfx.com/tools/emoji-cheat-sheet/).
 
-## Previewing Your Work Locally
+## Quick Setup
 
-We provided a basic set of instructions above for setting up Jekyll locally. Here is a more detailed set of instructions, if you need them.
+We use [GitHub Pages](https://pages.github.com/) so edits can be made in Markdown, updates can be managed using pull requests, and the results can be published automatically by GitHub.
 
-### Setup Jekyll
+In fact, each page has _Edit this page on GitHub_ links, making it easy to view a page, then go straight to the source to edit it and submit a PR! This is the best way to help us fix typos and make similar small edits.
+
+However, this easy approach only supports correcting content on a single page. for more significant changes, like adding new pages, you may want the ability to preview the changes locally. 
+
+Local previewing allows you to see how any changes, even on a single page, will _really_ look when rendered with stylesheets, etc. While GitHub renders Markdown well, there are extensions we use that are supported by Jekyll that won't be rendered correctly in GitHub's default Markdown file viewer. 
+
+> [!NOTE]
+> If you don't want to setup `jekyll` for previewing or if you have trouble setting it up, don't let that stop you from contributing content! Submit a PR with your changes and we'll review them in a running environment ourselves. We'll provide feedback as needed.
+
+So, to view the website locally and to make more extensive changes, you'll need to have a recent version of [Ruby](https://www.ruby-lang.org/en/) installed, along with the [`gem`](https://docs.ruby-lang.org/en/master/Gem.html) library management tool, and [`jekyll`](https://jekyllrb.com/) which is the webserver and rendering engine.
+
+We discuss these steps in more depth [below](#setup-jekyll), but the following steps may _just work_ for you.
+
+Install a recent version of Ruby 3. Note that on MacOS, the default Ruby installation is old, version 2.6.10. Installing Ruby will also install the `gem` dependency tool.
+
+This project's `Makefile` will attempt to install the remaining dependencies, including `jekyll`, when you run `make all` or `make view-local`.
+
+> [!WARNING]
+> The automatic setup of `jekyll` in the `Makefile` has only been tested on MacOS and it most likely doesn't work on Windows, unless you use the Linux subsystem. If you encounter problems on other platforms, please [post an issue](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/issues) to get help, or if you can fix the issue, a [pull request](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/pulls) (PR) is always welcome :nerd_face:. (More details on PRs below.)
+
+So, try `make view-local` and see if Jekyll is installed successfully and the website is rendered.
+
+The command will finish with a message like this:
+
+```
+...
+Server address: http://127.0.0.1:4000/
+Server running... press ctrl-c to stop.
+```
+
+Open the URL in a browser. 
+
+> [!TIP]
+> 1. On MacOS, use &#8984;-click on the URL to open it in a browser.
+> 2. Run `make help` for a list of commands defined.
+
+## Setup Jekyll
+
+If the "quick setup" instructions above didn't work for you, here are more detailed instructions.
 
 First, you'll need a reasonably recent version of Ruby installed. The one that comes with MacOS is _not new enough_. See [Use Homebrew to Install Ruby on MacOS](#use-homebrew-to-install-ruby-on-macos) to install [Homebrew](https://brew.sh) and then Ruby using the `brew` command.
 
