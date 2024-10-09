@@ -8,7 +8,7 @@ This repo contains the AI Alliance _Unlocking AI Potential: Navigating the Chall
 
 ## Contributing New or Improved Web Site Content
 
-First, thank you for your interest in improving this content! Please see our [Alliance contributing page](https://github.com/The-AI-Alliance/community/) for general information about contributing to any of our projects. This section provides some specific details you need to know.
+First, thank you for your interest in improving this content!. Please see our [Alliance contributing page](https://github.com/The-AI-Alliance/community/) for general information about contributing to any of our projects. This section provides some specific details you need to know.
 
 What gets displayed by GitHub Pages is the customized Markdown files in the `docs` directory. If you need to create a new page, copy an existing page to get the correct "header" information, then edit as needed.
 
@@ -28,38 +28,9 @@ As for most Git projects, issue PRs to the `main` branch. However, the repo is a
 > [!NOTE]
 > If you are curious, the details of how this publication branch is configured are discussed [below](#configuring-github-pages-in-the-repo-settings).
 
-## Publishing a New Version
+### Editing Conventions and Tips
 
-Because PRs go to the `main` branch, but the pages are published from the `latest` branch, PRs are not immediately published. When it is time to publish a new version of the website, change to the `main` git branch and run the script `./publish-website.sh`. It takes several options:
-
-```shell
-> publish-website.sh -h
-publish-website.sh [-h|--help] [-n|--noop] [-v|--version V] [-t|--timestamp T]
-
-Where the options are the following:
--h | --help            Print this message and exit
--n | --noop            Just print the commands but don't make changes.
--v | --version V       Use version string "V", which should be of the format
-                       "X.Y.Z". Without this option the current value of
-                       "last_version" in _config.yml is extracted (e.g., 1.0.1)
-                       and the last digit is incremented.
--t | --timestamp "T"   Use this timestamp "T", which you'll need to quote on
-                       the command line, because it must be of the form
-                       "%Y-%m-%d %H:%M %z". Without this option, the current
-                       system time is used.
-```
-
-With no arguments, the current version string's last digit will be incremented. For example, if the current version is `1.2.3`, the new version with be `1.2.4`. _Please use this `X.Y.Z` format if you specify a new version explicitly._ The script doesn't check the format.
-
-The script _does_ check that a specified timestamp uses the correct format, but it should be rare that you would want to use any timestamp other than the current time, which is the default.
-
-Both strings are printed at the bottom of each page, e.g.:
-
-> Version: 1.0.1. Site last modified: Jun 5 2024 08:13 -0500.
-
-## Editing Conventions and Tips
-
-### Links
+#### Links
 
 For internal cross-references, use the conventional `[title]({{site.baseurl}}/relative_URL)` Markdown syntax. 
 
@@ -74,9 +45,10 @@ For external links, add a `target` tag using the following syntax, which works f
 
 The `target` value is arbitrary; use whatever you want. While this is a little more tedious to type, it is usually better for users so they don't lose their place in the document. Also, [our stylesheet](https://github.com/The-AI-Alliance/ai-accelerator-software-ecosystem-guide/blob/main/docs/_includes/css/custom.scss.liquid) is configured to put the little up-and-to-the-right arrows after every link that isn't relative, i.e., links that start with `http` or `https`. This provides a visual clue that a new tab will be opened.
 
-### Emojis
+#### Emojis
 
 In the pages, you can use emojis, e.g., `:+1:` yields :+1:, `:smirk:` yields :smirk:, `:nerd_face:` yields :nerd_face:, etc. The `jemoji` Ruby gem adds this capability. [Here is a list of available emojis](https://www.webfx.com/tools/emoji-cheat-sheet/).
+
 
 ## Quick Setup
 
@@ -118,9 +90,36 @@ Open the URL in a browser.
 > 1. On MacOS, use &#8984;-click on the URL to open it in a browser.
 > 2. Run `make help` for a list of commands defined.
 
-## Setup Jekyll
+## Publishing a New Version
 
-If the "quick setup" instructions above didn't work for you, here are more detailed instructions.
+Because PRs go to the `main` branch, but the pages are published from the `latest` branch, PRs are not immediately published. When it is time to publish a new version of the website, change to the `main` git branch and run the script `./publish-website.sh`. It takes several options:
+
+```shell
+> publish-website.sh -h
+publish-website.sh [-h|--help] [-n|--noop] [-v|--version V] [-t|--timestamp T]
+
+Where the options are the following:
+-h | --help            Print this message and exit
+-n | --noop            Just print the commands but don't make changes.
+-v | --version V       Use version string "V", which should be of the format
+                       "X.Y.Z". Without this option the current value of
+                       "last_version" in _config.yml is extracted (e.g., 1.0.1)
+                       and the last digit is incremented.
+-t | --timestamp "T"   Use this timestamp "T", which you'll need to quote on
+                       the command line, because it must be of the form
+                       "%Y-%m-%d %H:%M %z". Without this option, the current
+                       system time is used.
+```
+
+With no arguments, the current version string's last digit will be incremented. For example, if the current version is `1.2.3`, the new version with be `1.2.4`. _Please use this `X.Y.Z` format if you specify a new version explicitly._ The script doesn't check the format.
+
+The script _does_ check that a specified timestamp uses the correct format, but it should be rare that you would want to use any timestamp other than the current time, which is the default.
+
+Both strings are printed at the bottom of each page, e.g.:
+
+> Version: 1.0.1. Site last modified: Jun 5 2024 08:13 -0500.
+
+## Setup Jekyll
 
 First, you'll need a reasonably recent version of Ruby installed. The one that comes with MacOS is _not new enough_. See [Use Homebrew to Install Ruby on MacOS](#use-homebrew-to-install-ruby-on-macos) to install [Homebrew](https://brew.sh) and then Ruby using the `brew` command.
 
@@ -251,3 +250,4 @@ gem list | grep jekyll
 This section documents the one-time settings changes we did to [configure publication of our GitHub Pages](https://docs.github.com/en/enterprise-server@3.1/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). We changed the desired branch to use, `latest`, rather than the default `main` branch, and we specified the directory for the website pages, `docs`. This only needs to be done if and when the branch or directory location is changed.
 
 In the repo's _Settings > GitHub Pages_ section, set the branch to be `latest` and the folder to be `/docs`. The reason for using `latest` rather than `main`, is to allow small changes to be made without affecting what is published until we decide to publish an update.
+
